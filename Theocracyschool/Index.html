@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- THIS CODE CONTAINS HTML, CSS AND JS -->
+  <title>THEOCRACY COMPLEX SCHOOL</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-color:white;
+      color:black;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      font-size: 200px;
+  }
+  .logo {
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+  }
+  .carousel-indicators li {
+      border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+      background-color: #f4511e;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+      align-items: center;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #f4511e; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #f4511e !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #f4511e;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color:darkblue;
+      z-index: 9999;
+      border: 0;
+      font-size: 20px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: 'Times New Roman', Times, serif, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+      
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color:darkblue !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  .navbar-brand {
+          max-height: 50px;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color:darkblue;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  .carousel-image {
+  max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+  height: auto; /* Maintain the aspect ratio of the image */
+}
+.moving-text {
+  animation-name: moveText;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  color:#f6f6f6;
+  opacity: 0.7;
+  
+}
+
+@keyframes moveText {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(50px); }
+  
+}
+#services {
+      background-color: beige;
+      text-align: center;
+    }
+    #services h2 {
+      margin-top: 50px;
+    }
+    .leader {
+      display: inline-block;
+      margin: 20px;
+    }
+    .leader img {
+      border-radius: 20%;
+      border: 2px solid black;
+      width: 300px;
+      height: 300px;
+    }
+    .leader h4 {
+      margin-top: 10px;
+    }
+    .leader p {
+      margin-bottom: 20px;
+    }
+    #portfolio {
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+    #portfolio h2 {
+      margin-top: 50px;
+    }
+    #portfolio h4 {
+      margin-bottom: 50px;
+    }
+    .thumbnail {
+      display: inline-block;
+      margin: 20px;
+    }
+    .thumbnail img {
+      border-radius: 10px;
+      width: 400px;
+      height: 300px;
+    }
+    .thumbnail p {
+      margin-top: 10px;
+    }
+
+    .YPG_LOGO {
+      width: 200PX;
+    }
+    .menu {
+      display: inline-block;
+      margin-right: 20px;
+    }
+    .menu-button {
+      background-color: #f4511e;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .menu-button:hover {
+      background-color: #e64a19;}
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#myPage">
+                <img src="Screenshot_1.png" alt="Logo" style="max-height: 45px;border-radius: 10%; border: 2px solid white; width:50PX">
+            </a>
+            <a class="navbar-brand" href="#myPage">
+                <img src="theo1.jpg" alt="Logo" style="max-height: 45px;border-radius:10%; border: 2px solid black;width:45PX">
+            </a>
+            <h1 style="font-family:'Times New Roman', Times, serif; font-size: 30px; color:#f6f6f6;opacity:0.6 ">THEOCRACY SCHOOL PARKOSO</h1>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#services">STAFF</a></li>
+            <li><a href="#portfolio">GALLERY</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+          
+          
+        </div>
+    </div>
+</nav>
+
+  
+  
+
+<div class="jumbotron text-center">
+  <h1 style="font-family: 'Times New Roman', Times, serif;">THEOCRACY SCHOOL COMPLEX</h1> 
+  <div class="menu">
+    <a href="SHADRACK2-KNUST-EDUCATION-6884221.html" class="menu-button"> UPCOMING EVENTS, CLICK TO READ MORE</a>
+  </div>
+  <form class="form-inline">
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger" onclick="SignUp()">Send Us an Email!</button>
+      </div>
+    </div>
+    
+  </form>
+  <!-- Container (About Section) -->
+  <div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <div style="text-align: center; ">
+        <h2>About The School</h2>
+        Theocracy Complex School, Kumasi Campus, was  established on 6th September, 2015. The school has its main campus at Homedakrom which is  nearer to Otiakrom in the Akwapem South District in Eastern Region of Ghana.
+The proprietor of the school is Apostle Kadmiel E.H. Agbalenyoh who is also the Missionary in charge of Seventh Day Theocratic World Congregation. </br>
+
+Motto: Becoming like God in character. </br>
+
+
+<strong>VISION STATEMENT </strong></br>
+To engage learners to portray God's character and equips them to reach their unique potentials spiritually,physically, socially and academically. </br>
+
+<strong>MISSION STATEMENT </strong> </br>
+The  school seeks to be a learning organization that produces life-long learners and responsible citizens that will meet the current socio-economic challenges. </br>
+
+<strong>CORE VALUES</strong> </br>
+Humility, Creativity and Excellence
+
+    </div>
+    
+    </div>
+  </div>
+</div>
+  <h2>THEOCRACY SCHOOL COMPLEX</h2>
+  <img src="theo1.jpg" style="border-radius:5%; height:40%; width:30%">
+</div>
+<h2 style="text-align: center;">BECOMING LIKE GOD IN CHARACTER</h2>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="theo4.jpg" alt="First Slide" class="carousel-image"style="width:100%;">
+    </div>
+    <div class="item">
+      <img src="theo5.jpg" alt="Second Slide" class="carousel-image"style="width:100%;">
+    </div>
+    <div class="item">
+      <img src="theo6.jpg" alt="Third Slide" class="carousel-image" style="width:100%;">
+    </div>
+  </div>
+  
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<section class="section-padding latest_event_sermons">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-6" data-aos="zoom-in-up">
+              <div class="heading">
+                  <h3>Upcoming Events</h3>
+              </div>
+              <div class="event_list">
+                  <ul>
+                                                      <!-- Well begun is half done. - Aristotle -->
+
+<div class="flex-col flex-c-m container mb-5" message="No upcoming events" style="font-weight: bolder;">
+<img src="up.jpg" class="img-lg" />
+</div>
+                                              </ul>
+              </div>
+          </div>
+
+          
+                              </div>
+                          </div>
+                                                                  </div>
+          </div>
+      </div>
+  </div>
+</section>
+<div style="text-align: center;color:#303030">
+ <h1 style="color:blue;font-family:'Times New Roman', Times, serif;"> SCHOOL'S ANTHEM </h1>
+  On the hills of Great Mount Zion.
+  <br>
+Stand the Great Old Theocracy School,
+<br>
+To portray God's character on earth,
+<br>
+<br>
+
+To become like God alone.<br>
+
+<br>
+CHORUS</br>
+
+our aim, our motto and desire<br>
+Is to portray God's character<br>
+To portray God's character on earth<br>
+To become like God alone..<br>
+<br>
+</div>
+<br>
+
+<!-- Container (Services Section) --> 
+<body>
+  <div id="services">
+    <h2>STAFF/ SCHOOL LEADERS</h2>
+    <h4>KNOW YOUR LEADERS</h4>
+    <div class="leader">
+      <img src="Head.jpg" alt="Prez">
+      <h4>HEAD TEACHER</h4>
+      <p><strong>Mr Koomson John</strong></p>
+    </div>
+    <div class="leader">
+      <img src="image.png" alt="VICE">
+      <h4>HEAD PASTOR THEOCRACY CHURCH-GHANA</h4>
+      <p><strong>Apostle Dr. Kadmiel E H Abgalenyo</strong></p>
+    </div>
+    <div class="leader">
+      <img src="board.jpg" alt="board">
+      <h4>BOARD HEAD</h4>
+      <p><strong>Dr Samuel N.B Antwi</strong></p>
+    </div>
+    </div>
+  </div>
+  <div id="portfolio">
+    <h2>SCHOOL'S IMAGES</h2>
+    <h4>GALLERY</h4>
+    <div class="thumbnail">
+      <img src="soldier.jpg" alt="career day">
+      <p><strong>CAREER DAY</strong></p>
+      <p>Career Day Display @ the school's premise</p>
+    </div>
+    <div class="thumbnail">
+      <img src="theo3.jpg" alt="career day">
+      <p><strong>QUIZ</strong></p>
+      <p> Quiz competition@ the school's premise</p>
+    </div>
+    <div class="thumbnail">
+      <img src="dip.jpg" alt="career day">
+      <p><strong>CAREER DAY</strong></p>
+      <p>Career Day display@ the school's premise</p>
+    </br>
+    </div>
+    <a href="https://drive.google.com/drive/folders/1ulBeK8auG0KTOBZxEzxRtKI9V_kvaW3F?usp=sharing"> TAP TO GET MORE IMAGES ON GOOGLE DRIVE </a>
+  </div>
+</body>
+</html>
+<br>
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-right">ENROLL YOUR CHILD NOW!</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>THEOCRACY SCHOOL COMPLEX</p>
+      <p><span class="glyphicon glyphicon-phone"></span> 0595180459</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>theocracycomplexschool@gmail.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="name" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" placeholder="phone number" type="number" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Let us know how you heard about " rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button onclick="sendMessage()">Send</button></br>
+          <!-- Image of location/map -->
+        </br><img src="theo1.jpg" class="YPG_LOGO" alt="YPG LOGO" style="width:50%; height:30%; align-items: center; border-radius:10%;border: 2px solid-white;">   </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Website Made By <a href="mailto:shadrackduah54@gmail.com" title="shadrackduah54@gmail.com">shadrackduah54@gmail.com</a></p>
+
+<footer class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <div class="collapse navbar-collapse" id="myFooter">
+      <ul class="nav navbar-nav navbar-right">
+         <class="container-fluid text-center">
+          <div class="moving-text">
+            <p>"THEOCRACY SCHOOL COMPLEX PARKOSO BRANCH-THE SCHOOL WITH A DIFFERENCE"!</p>
+          </div>
+        
+        
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  function sendMessage() {
+      alert('Message sent!');
+    }
+    function SignUp() {
+      alert('THANKS FOR SIGNING UP, ENJOY YOUR STAY!');
+    }
+    $(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Prevent default anchor click behaviorh
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+   
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  });
+  
+  // Slide in elements on scroll
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+
+</body>
+</html>
